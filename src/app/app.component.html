@@ -20,8 +20,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor = "let item of getItems(); let i = index">
-               <td>{{ i+1 }}</td> 
+            <tr *ngFor = "let item of getItems(); let i = index"> <!--getItems() fonksiyonu Model.ts dosyasından items dizisini temsil eder--> <!-- i for döngüsünde sıfırdan başlar -->
+              <td>{{ i+1 }}</td> 
               <td>{{ item.description }}</td>
               <td [ngSwitch] = "item.action">
                 <span *ngSwitchCase = "true">
